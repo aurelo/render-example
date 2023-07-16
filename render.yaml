@@ -1,4 +1,7 @@
-databases:
-  - name: pg_db
+services:
+  - type: web
+    name: spring-dockerized-service
+    runtime: docker
+    region: frankfurt
     plan: free
-
+    healthCheckPath: /
