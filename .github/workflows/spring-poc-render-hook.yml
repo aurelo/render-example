@@ -1,4 +1,4 @@
-name: Render hook example
+name: Render Spring POC hook example
 
 on:
   workflow_dispatch:
