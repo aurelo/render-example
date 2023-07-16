@@ -1,0 +1,11 @@
+name: Render hook example
+
+on:
+  workflow_dispatch:
+  
+  
+jobs:
+  deploy-app:
+    runs-on: ubuntu-latest
+    
+    run: curl ${{secrets.RENDER_HOOK_URL}}
