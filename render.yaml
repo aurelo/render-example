@@ -1,24 +1,3 @@
-services:
-  - type: web
-    name: spring-dockerized-service
-    runtime: docker
-    region: frankfurt
-    plan: free
-    healthCheckPath: /
-    envVars:
-      - key: DB_URL
-        fromDatabase:
-          name: pg_db
-          property: connectionString
-      - key: DB_PASS
-        fromDatabase:
-          name: pg_db
-          property: password
-      - key: DB_USER
-        fromDatabase:
-          name: pg_db
-          property: user
-
 databases:
   - name: pg_db
     region: frankfurt
