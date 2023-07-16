@@ -1,3 +1,8 @@
+databases:
+  - name: pg_db
+    region: frankfurt
+    plan: free
+
 services:
   - type: web
     name: spring-dockerized-service
