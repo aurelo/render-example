@@ -1,7 +1,7 @@
 databases:
   - name: pg_db
-    region: frankfurt
-    plan: starter
+#    region: frankfurt
+#    plan: starter
 
 services:
   - type: web
