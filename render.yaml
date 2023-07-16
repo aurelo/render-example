@@ -22,6 +22,6 @@ services:
           property: user
 
 databases:
-  - name: pq_db
+  - name: pg_db
     region: frankfurt
     plan: free
