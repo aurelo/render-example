@@ -1,4 +1,3 @@
 databases:
   - name: pg_db
-    region: frankfurt
-    plan: free
+
