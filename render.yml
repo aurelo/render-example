@@ -1,0 +1,27 @@
+services:
+  # A Docker web service
+  - type: web
+    name: spring-dockerized-service
+    runtime: docker
+    region: frankfurt # optional (defaults to oregon)
+    plan: free
+    healthCheckPath: /
+    envVars:
+      - key: DB_URL
+        fromDatabase:
+          name: pg_db
+          #          property: jdbc:postgresql://dpg-ciq0qjd9aq0dcppjst3g-a:5432/ss2c
+          property: connectionString
+      - key: DB_PASS
+        fromDatabase:
+          name: pg_db
+          property: password
+      - key: DB_USER
+        fromDatabase:
+          name: pg_db
+          property: user
+
+databases:
+  - name: pq_db
+    region: frankfurt
+    plan: free
