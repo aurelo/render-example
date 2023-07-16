@@ -13,8 +13,9 @@ services:
 
   - type: web
     name: spring-consumer
-    runtime: docker
-    url: aurelo/spring_consumer:latest
+    runtime: image
+    image:
+      url: aurelo/spring_consumer:latest
     region: frankfurt
     plan: free
     healthCheckPath: /
